@@ -1,73 +1,143 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PenTool, Briefcase, GraduationCap, Code2, Globe2, User } from "lucide-react";
+import { Mail, MessageCircle, FileText, Twitter, Heart, Headphones, Briefcase, BookOpen } from "lucide-react";
 
 const useCases = [
   {
-    role: "Writers",
-    action: "Rephrase sentences, adjust tone, fix grammar",
-    icon: PenTool,
+    icon: Mail,
+    context: "Email",
+    description: "Professional emails in seconds, not minutes",
+    example: "Turn quick thoughts into polished responses",
+    color: "from-blue-500/20 to-blue-600/20",
+    iconColor: "text-blue-400",
   },
   {
-    role: "Professionals",
-    action: "Make emails more formal, simplify complex text",
+    icon: Twitter,
+    context: "Twitter/X",
+    description: "Threads and posts that get engagement",
+    example: "Go viral without the cringe",
+    color: "from-sky-500/20 to-sky-600/20",
+    iconColor: "text-sky-400",
+  },
+  {
+    icon: MessageCircle,
+    context: "Slack",
+    description: "Quick, clear team communication",
+    example: "Sound professional in every channel",
+    color: "from-purple-500/20 to-purple-600/20",
+    iconColor: "text-purple-400",
+  },
+  {
+    icon: FileText,
+    context: "Docs & Notion",
+    description: "Documentation that people actually read",
+    example: "Write specs and PRDs faster",
+    color: "from-orange-500/20 to-orange-600/20",
+    iconColor: "text-orange-400",
+  },
+  {
+    icon: Heart,
+    context: "Dating apps",
+    description: "Messages that get responses",
+    example: "Be witty without trying too hard",
+    color: "from-pink-500/20 to-pink-600/20",
+    iconColor: "text-pink-400",
+  },
+  {
+    icon: Headphones,
+    context: "Support replies",
+    description: "Helpful, empathetic customer responses",
+    example: "Resolve tickets 2x faster",
+    color: "from-green-500/20 to-green-600/20",
+    iconColor: "text-green-400",
+  },
+  {
     icon: Briefcase,
+    context: "Job applications",
+    description: "Cover letters that stand out",
+    example: "Land more interviews",
+    color: "from-indigo-500/20 to-indigo-600/20",
+    iconColor: "text-indigo-400",
   },
   {
-    role: "Students",
-    action: "Improve essays, clarify explanations",
-    icon: GraduationCap,
-  },
-  {
-    role: "Developers",
-    action: "Rewrite documentation, improve comments",
-    icon: Code2,
-  },
-  {
-    role: "Non-native speakers",
-    action: "Fix grammar, translate text naturally",
-    icon: Globe2,
-  },
-  {
-    role: "Everyone",
-    action: "Quick text improvements without switching apps",
-    icon: User,
+    icon: BookOpen,
+    context: "Content writing",
+    description: "Blog posts, articles, newsletters",
+    example: "Publish more, edit less",
+    color: "from-amber-500/20 to-amber-600/20",
+    iconColor: "text-amber-400",
   },
 ];
 
 export function UseCases() {
   return (
-    <section className="bg-muted/30 px-4 py-24 md:px-6">
-      <div className="container mx-auto">
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Who is TypeBetter for?
+    <section className="bg-[#0a0a0a] px-4 py-24 md:px-6">
+      <div className="container mx-auto max-w-6xl">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16 text-center"
+        >
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+            Write like a pro in any app
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Perfect for anyone who works with text.
+          <p className="mt-4 text-xl text-gray-400">
+            TypeBetter improves your writing wherever you need it
           </p>
-        </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        </motion.div>
+
+        {/* Grid */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {useCases.map((useCase, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="flex items-start space-x-4 rounded-lg bg-background p-4 shadow-sm"
+              className="group relative overflow-hidden rounded-2xl border border-white/5 bg-[#111111] p-6 transition-all hover:border-white/10 hover:bg-[#151515]"
             >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary">
-                <useCase.icon className="h-5 w-5 text-foreground" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground">{useCase.role}</h3>
-                <p className="text-sm text-muted-foreground">{useCase.action}</p>
+              {/* Background Gradient */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${useCase.color} opacity-0 transition-opacity group-hover:opacity-100`} />
+
+              {/* Content */}
+              <div className="relative">
+                <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 ${useCase.iconColor}`}>
+                  <useCase.icon className="h-6 w-6" />
+                </div>
+
+                <h3 className="mb-2 text-lg font-semibold text-white">
+                  {useCase.context}
+                </h3>
+
+                <p className="mb-3 text-sm text-gray-400">
+                  {useCase.description}
+                </p>
+
+                <p className="text-xs text-gray-500 italic">
+                  &quot;{useCase.example}&quot;
+                </p>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
+          <p className="text-gray-500">
+            And{" "}
+            <span className="text-white">every other text field</span>{" "}
+            on your Mac
+          </p>
+        </motion.div>
       </div>
     </section>
   );

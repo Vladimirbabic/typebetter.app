@@ -1,81 +1,73 @@
-import { Github, Twitter, Download, Shield } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Github, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-background pt-24 pb-12">
-      {/* Bottom CTA */}
-      <div className="container mx-auto px-4 mb-24 text-center">
-         <div className="flex justify-center gap-4 mb-8">
-             <div className="h-12 w-10 bg-white/5 rounded border border-white/10 flex items-center justify-center">
-                <span className="text-xs font-bold text-orange-400">High</span>
-             </div>
-             <div className="h-12 w-10 bg-white/5 rounded border border-white/10 flex items-center justify-center">
-                <span className="text-xs font-bold text-purple-400">Top</span>
-             </div>
-             <div className="h-12 w-10 bg-white/5 rounded border border-white/10 flex items-center justify-center">
-                <span className="text-xs font-bold text-blue-400">Best</span>
-             </div>
-         </div>
-         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Bring the magic of AI to your Mac.
-         </h2>
-         <div className="flex flex-col items-center gap-4">
-             {/* Logo */}
-             <div className="h-16 w-16 rounded-2xl bg-[#1a1a1a] border border-white/10 shadow-xl mb-2 p-0.5">
-                 <img src="/app-icon.png" alt="TypeBetter Logo" className="h-full w-full object-cover rounded-[14px]" />
-             </div>
-             <div className="text-xl font-bold text-white">TypeBetter</div>
-             <p className="text-gray-500 max-w-sm">Use AI in any app on macOS. Save hours on written communication at work.</p>
-             
-             <Button className="mt-6 rounded-full bg-white text-black hover:bg-gray-200 px-8 h-12">
-                <Download className="mr-2 h-4 w-4" /> Download macOS App
-             </Button>
-             <p className="text-xs text-gray-600">Apple Silicon & Intel · macOS 12+</p>
-         </div>
-      </div>
+    <footer className="bg-[#0a0a0a] pt-16 pb-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
+          {/* Brand */}
+          <div className="col-span-2 md:col-span-1 lg:col-span-2">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-10 w-10 rounded-xl border border-white/10 bg-[#1a1a1a] p-0.5">
+                <img src="/app-icon.png" alt="TypeBetter" className="h-full w-full rounded-lg" />
+              </div>
+              <span className="text-lg font-bold text-white">TypeBetter</span>
+            </div>
+            <p className="text-sm text-gray-500 max-w-xs">
+              AI-powered writing improvement for Mac. Type better, faster, everywhere.
+            </p>
+            <div className="mt-4 flex gap-3">
+              <a href="#" className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-400 transition-colors hover:bg-white/10 hover:text-white">
+                <Twitter className="h-4 w-4" />
+              </a>
+              <a href="#" className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-400 transition-colors hover:bg-white/10 hover:text-white">
+                <Github className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
 
-      <div className="container mx-auto px-4 border-t border-white/10 pt-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Product */}
           <div>
-            <h4 className="mb-6 font-bold text-white">App</h4>
+            <h4 className="mb-4 text-sm font-semibold text-white">Product</h4>
             <ul className="space-y-3 text-sm text-gray-500">
-                <li><a href="#" className="hover:text-white transition-colors">Grammarly alternative</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Prompt library</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Download</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Releases</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">EULA</a></li>
+              <li><a href="#" className="transition-colors hover:text-white">Download</a></li>
+              <li><a href="#" className="transition-colors hover:text-white">Pricing</a></li>
+              <li><a href="#" className="transition-colors hover:text-white">Features</a></li>
+              <li><a href="#" className="transition-colors hover:text-white">Changelog</a></li>
             </ul>
           </div>
+
+          {/* Resources */}
           <div>
-            <h4 className="mb-6 font-bold text-white">Guides</h4>
+            <h4 className="mb-4 text-sm font-semibold text-white">Resources</h4>
             <ul className="space-y-3 text-sm text-gray-500">
-                <li><a href="#" className="hover:text-white transition-colors">Summarize YouTube videos</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Interface overview</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Running actions</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Attachments</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Dictation</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Presets</a></li>
+              <li><a href="#" className="transition-colors hover:text-white">Documentation</a></li>
+              <li><a href="#" className="transition-colors hover:text-white">API Keys Guide</a></li>
+              <li><a href="#" className="transition-colors hover:text-white">Support</a></li>
+              <li><a href="#" className="transition-colors hover:text-white">Contact</a></li>
             </ul>
           </div>
+
+          {/* Legal */}
           <div>
-            <h4 className="mb-6 font-bold text-white">Integrations</h4>
-             <ul className="space-y-3 text-sm text-gray-500">
-                <li><a href="#" className="hover:text-white transition-colors">Perplexity</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">OpenRouter</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Anthropic</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">OpenAI</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Google</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Ollama</a></li>
+            <h4 className="mb-4 text-sm font-semibold text-white">Legal</h4>
+            <ul className="space-y-3 text-sm text-gray-500">
+              <li><a href="#" className="transition-colors hover:text-white">Privacy Policy</a></li>
+              <li><a href="#" className="transition-colors hover:text-white">Terms of Service</a></li>
+              <li><a href="#" className="transition-colors hover:text-white">EULA</a></li>
             </ul>
           </div>
-          <div className="flex flex-col justify-between">
-             <div className="flex gap-4">
-                <a href="#" className="text-gray-500 hover:text-white transition-colors"><Twitter className="h-5 w-5" /></a>
-                <a href="#" className="text-gray-500 hover:text-white transition-colors"><Github className="h-5 w-5" /></a>
-             </div>
-             <p className="text-xs text-gray-600 mt-8 md:mt-0">&copy; {new Date().getFullYear()} TypeBetter.</p>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 border-t border-white/5 pt-8">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <p className="text-sm text-gray-600">
+              &copy; {new Date().getFullYear()} TypeBetter. All rights reserved.
+            </p>
+            <p className="text-sm text-gray-600">
+              Made with care for writers everywhere.
+            </p>
           </div>
         </div>
       </div>
