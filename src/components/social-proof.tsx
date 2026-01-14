@@ -6,13 +6,13 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Sarah Chen",
-    role: "Product Manager at Linear",
+    role: "Product Manager",
     content: "TypeBetter cut my email time in half. I used to spend 20 minutes crafting the perfect message. Now I just type and it's done.",
     avatar: "SC",
   },
   {
     name: "Marcus Johnson",
-    role: "Founder, SaaS Startup",
+    role: "Startup Founder",
     content: "As a non-native English speaker, this is a game changer. My investor updates and customer emails finally sound professional.",
     avatar: "MJ",
   },
@@ -118,23 +118,6 @@ export function SocialProof() {
           ))}
         </div>
 
-        {/* Logos */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <p className="mb-6 text-sm text-gray-500">Used by teams at</p>
-          <div className="flex flex-wrap items-center justify-center gap-8 text-gray-600">
-            <span className="text-xl font-bold">Linear</span>
-            <span className="text-xl font-bold">Notion</span>
-            <span className="text-xl font-bold">Vercel</span>
-            <span className="text-xl font-bold">Raycast</span>
-            <span className="text-xl font-bold">Supabase</span>
-            <span className="text-xl font-bold">Resend</span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

@@ -40,7 +40,15 @@ export function Pricing() {
 
           {/* Plan Header */}
           <div className="mb-8 text-center">
-            <div className="mt-4">
+            {/* App Icon */}
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-[#1a1a1a] shadow-2xl">
+              <img
+                src="/app-icon.png"
+                alt="TypeBetter"
+                className="h-16 w-16 rounded-xl"
+              />
+            </div>
+            <div>
               <span className="text-6xl font-bold text-white">$0</span>
               <span className="ml-2 text-xl text-gray-400">/forever</span>
             </div>
