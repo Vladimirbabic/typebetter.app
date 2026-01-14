@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Apple, Download, Play, Check } from "lucide-react";
 import { useState, useEffect } from "react";
+import { LaserFlow } from "@/components/LaserFlow";
 
 const typingDemo = {
   original: "hey can u send me the report asap? its urgent and i need it like now pls",
@@ -50,6 +51,26 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-background px-4 pt-24 pb-16 md:px-6 lg:pt-32">
+      {/* LaserFlow Background */}
+      <div className="absolute inset-0 -z-10 flex items-center justify-center overflow-hidden">
+        <div className="w-full h-full max-w-[1080px] max-h-[1080px]">
+          <LaserFlow
+            color="#6e4497"
+            wispDensity={3.3}
+            flowSpeed={0.24}
+            verticalSizing={3.5}
+            horizontalSizing={0.98}
+            fogIntensity={0.18}
+            fogScale={0.3}
+            wispSpeed={11.5}
+            wispIntensity={2}
+            flowStrength={0.5}
+            decay={1}
+            horizontalBeamOffset={0}
+            verticalBeamOffset={-0.5}
+          />
+        </div>
+      </div>
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_rgba(79,70,229,0.15)_0%,_rgba(0,0,0,0)_50%)]" />
 
       <div className="container mx-auto max-w-7xl">
