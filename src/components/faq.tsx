@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Is my data private? Does TypeBetter see what I type?",
     answer:
-      "Privacy is our top priority. TypeBetter only processes the text you explicitly choose to improve. We don't log, store, or train on your data. If you use local models (Ollama, LM Studio), your text never leaves your machine. With cloud models, data is sent directly to the AI provider (OpenAI, Anthropic) under their privacy policies—we're just the messenger.",
+      "Privacy is our top priority. TypeBetter only processes the text you explicitly choose to improve. We don't log, store, or train on your data. Your API key is stored securely in macOS Keychain. Data is sent directly to the AI provider (OpenAI, Anthropic, Google) under their privacy policies—we're just the messenger.",
   },
   {
     question: "Does it see my passwords or sensitive information?",
@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "What AI models are supported?",
     answer:
-      "We support all major models including GPT-4o, GPT-4, Claude 3.5 Sonnet, Claude 3 Opus, Gemini Pro, and local models via Ollama and LM Studio. Pro users get priority access to the fastest, most capable models.",
+      "We support all major models including GPT-4o, GPT-4, Claude 3.5 Sonnet, Claude 3 Opus, and Gemini Pro. Bring your own API key and choose the model that works best for you.",
   },
   {
     question: "Can I use my own API keys?",

@@ -5,7 +5,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-6">
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400">
-            <a href="#" className="transition-colors hover:text-white">Download</a>
+            <a href="https://github.com/Vladimirbabic/typebettermac/releases/latest/download/TypeBetter.zip" className="transition-colors hover:text-white">Download</a>
             <a href="/changelog" className="transition-colors hover:text-white">Changelog</a>
             <a href="/api-key-guide" className="transition-colors hover:text-white">API Key Guide</a>
             <a href="#" className="transition-colors hover:text-white">Contact</a>

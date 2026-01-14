@@ -17,10 +17,12 @@ export function Header() {
           </a>
 
           {/* Download Button */}
-          <Button className="h-10 rounded-full bg-white px-6 font-semibold text-black hover:bg-gray-200">
-            <Download className="mr-2 h-4 w-4" />
-            Download
-          </Button>
+          <a href="https://github.com/Vladimirbabic/typebettermac/releases/latest/download/TypeBetter.zip">
+            <Button className="h-10 rounded-full bg-white px-6 font-semibold text-black hover:bg-gray-200">
+              <Download className="mr-2 h-4 w-4" />
+              Download
+            </Button>
+          </a>
         </div>
       </div>
     </header>

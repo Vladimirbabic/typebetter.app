@@ -55,9 +55,11 @@ export function Hero() {
 
             {/* CTAs */}
             <div className="mt-10">
-              <Button size="lg" className="h-14 rounded-full bg-white px-8 text-lg font-semibold text-black hover:bg-gray-200">
-                <Download className="mr-2 h-5 w-5" /> Download for Mac
-              </Button>
+              <a href="https://github.com/Vladimirbabic/typebettermac/releases/latest/download/TypeBetter.zip">
+                <Button size="lg" className="h-14 rounded-full bg-white px-8 text-lg font-semibold text-black hover:bg-gray-200">
+                  <Download className="mr-2 h-5 w-5" /> Download for Mac
+                </Button>
+              </a>
             </div>
 
             {/* System Requirements */}

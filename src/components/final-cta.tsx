@@ -45,9 +45,11 @@ export function FinalCTA() {
 
             {/* CTA Button */}
             <div className="mt-10 flex flex-col items-center gap-4">
-              <Button size="lg" className="h-16 rounded-full bg-white px-10 text-xl font-semibold text-black hover:bg-gray-200">
-                <Download className="mr-3 h-6 w-6" /> Download for Mac
-              </Button>
+              <a href="https://github.com/Vladimirbabic/typebettermac/releases/latest/download/TypeBetter.zip">
+                <Button size="lg" className="h-16 rounded-full bg-white px-10 text-xl font-semibold text-black hover:bg-gray-200">
+                  <Download className="mr-3 h-6 w-6" /> Download for Mac
+                </Button>
+              </a>
 
               <div className="flex items-center gap-2 text-sm text-gray-500">
                 <Apple className="h-4 w-4" />
