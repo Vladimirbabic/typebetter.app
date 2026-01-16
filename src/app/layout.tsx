@@ -16,11 +16,13 @@ export const metadata: Metadata = {
     title: "TypeBetter - Type 3x faster with AI that rewrites in real time",
     description: "AI-powered writing improvement for Mac. No copy-paste. No prompts. Just type.",
     type: "website",
+    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "TypeBetter - Type 3x faster with AI",
     description: "AI-powered writing improvement for Mac. Works in every app.",
+    images: ["/og-image.png"],
   },
 };
 
