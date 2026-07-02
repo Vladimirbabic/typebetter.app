@@ -3,8 +3,16 @@ import { Footer } from "@/components/footer";
 
 const changelog = [
   {
+    version: "2.16",
+    date: "July 1, 2026",
+    title: "Latest Release",
+    changes: [
+      { type: "improved", text: "Faster, more responsive dictation recording indicator." },
+    ],
+  },
+  {
     version: "1.0.0",
-    date: "January 14, 2025",
+    date: "January 14, 2026",
     title: "Initial Release",
     changes: [
       { type: "new", text: "Launch TypeBetter for Mac" },
@@ -42,6 +50,9 @@ export default function Changelog() {
             </h1>
             <p className="mt-4 text-xl text-gray-400">
               New updates and improvements to TypeBetter.
+            </p>
+            <p className="mt-2 text-sm text-gray-500">
+              This page highlights select releases. For the full version history, check the in-app updater under TypeBetter &rarr; Check for Updates.
             </p>
           </div>
 

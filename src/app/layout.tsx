@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://typebetter.app"),
   title: "TypeBetter - Type 3x faster with AI that rewrites in real time",
   description: "TypeBetter sits between your keyboard and every Mac app, improving what you write before it hits the screen. Works in Slack, Gmail, Notion, and everywhere you type.",
   icons: {

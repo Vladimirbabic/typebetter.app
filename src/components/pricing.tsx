@@ -58,7 +58,7 @@ export function Pricing() {
           </div>
 
           {/* CTA Button */}
-          <a href="https://github.com/Vladimirbabic/typebettermac/releases/latest/download/TypeBetter.zip">
+          <a href="/download">
             <Button
               className="mb-8 w-full h-14 rounded-xl font-semibold text-lg bg-white text-black hover:bg-gray-200"
             >

@@ -55,7 +55,7 @@ export function Hero() {
 
             {/* CTAs */}
             <div className="mt-10">
-              <a href="https://github.com/Vladimirbabic/typebettermac/releases/latest/download/TypeBetter.zip">
+              <a href="/download">
                 <Button size="lg" className="h-14 rounded-full bg-white px-8 text-lg font-semibold text-black hover:bg-gray-200">
                   <Download className="mr-2 h-5 w-5" /> Download for Mac
                 </Button>
@@ -65,7 +65,7 @@ export function Hero() {
             {/* System Requirements */}
             <div className="mt-6 flex items-center gap-2 text-sm text-gray-500">
               <Apple className="h-4 w-4" />
-              <span>macOS 12+ · Apple Silicon & Intel · Free to start</span>
+              <span>macOS 13+ · Apple Silicon & Intel · Free to start</span>
             </div>
           </motion.div>
 
