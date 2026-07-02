@@ -34,3 +34,6 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 .env*
+
+# Local video source backups (pre-transcode originals, kept locally only)
+*.orig.mp4

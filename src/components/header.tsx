@@ -17,12 +17,12 @@ export function Header() {
           </a>
 
           {/* Download Button */}
-          <a href="/download">
-            <Button className="h-10 rounded-full bg-white px-6 font-semibold text-black hover:bg-gray-200">
+          <Button asChild className="h-10 rounded-full bg-white px-6 font-semibold text-black hover:bg-gray-200">
+            <a href="/download">
               <Download className="mr-2 h-4 w-4" />
               Download
-            </Button>
-          </a>
+            </a>
+          </Button>
         </div>
       </div>
     </header>

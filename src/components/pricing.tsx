@@ -58,14 +58,15 @@ export function Pricing() {
           </div>
 
           {/* CTA Button */}
-          <a href="/download">
-            <Button
-              className="mb-8 w-full h-14 rounded-xl font-semibold text-lg bg-white text-black hover:bg-gray-200"
-            >
+          <Button
+            asChild
+            className="mb-8 w-full h-14 rounded-xl font-semibold text-lg bg-white text-black hover:bg-gray-200"
+          >
+            <a href="/download">
               <Download className="mr-2 h-5 w-5" />
               Download Free
-            </Button>
-          </a>
+            </a>
+          </Button>
 
           {/* Features */}
           <div className="space-y-4">

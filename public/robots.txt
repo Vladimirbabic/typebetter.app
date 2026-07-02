@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://typebetter.app/sitemap.xml

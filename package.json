@@ -1,8 +1,7 @@
 {
-  "name": "reward-website-landing",
+  "name": "typebetter-landing",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Marketing landing site for TypeBetter — the Mac app that rewrites your text with AI in real time.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,8 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
-    "@react-three/fiber": "^9.5.0",
-    "@types/three": "^0.182.0",
+    "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.26.2",
@@ -24,8 +22,7 @@
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "tailwind-merge": "^3.4.0",
-    "tailwindcss-animate": "^1.0.7",
-    "three": "^0.167.1"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^25.0.8",

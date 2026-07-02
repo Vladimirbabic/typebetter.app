@@ -5,7 +5,6 @@ import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { Magic } from "@/components/magic";
 import { Pricing } from "@/components/pricing";
-import { SocialProof } from "@/components/social-proof";
 import { UseCases } from "@/components/use-cases";
 
 export default function Home() {
@@ -26,8 +25,14 @@ export default function Home() {
       {/* Section 4: Why it feels magic */}
       <Magic />
 
-      {/* Section 5: Social Proof - Testimonials & Metrics */}
-      <SocialProof />
+      {/* Section 5: Honest strip - no fake metrics or testimonials */}
+      <section className="bg-[#0a0a0a] px-4 py-16 md:px-6">
+        <div className="container mx-auto max-w-3xl text-center">
+          <p className="text-lg text-gray-400 sm:text-xl">
+            Built for people who write all day — powered by your own API key.
+          </p>
+        </div>
+      </section>
 
       {/* Section 6: Pricing with Free vs Pro */}
       <Pricing />

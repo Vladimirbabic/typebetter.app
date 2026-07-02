@@ -3,8 +3,35 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Apple, Download, Check } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+
+function usePrefersReducedMotion() {
+  const [prefersReduced, setPrefersReduced] = useState(false);
+
+  useEffect(() => {
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setPrefersReduced(query.matches);
+    const onChange = (event: MediaQueryListEvent) => setPrefersReduced(event.matches);
+    query.addEventListener("change", onChange);
+    return () => query.removeEventListener("change", onChange);
+  }, []);
+
+  return prefersReduced;
+}
 
 export function Hero() {
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Removing the `autoPlay` attribute never pauses a video that already began
+  // playing before hydration flipped the flag — pause it imperatively so a
+  // reduced-motion user doesn't get motion they opted out of.
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      videoRef.current?.pause();
+    }
+  }, [prefersReducedMotion]);
+
   return (
     <section className="relative overflow-hidden bg-background px-4 pt-24 pb-16 md:px-6 lg:pt-32">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_rgba(79,70,229,0.15)_0%,_rgba(0,0,0,0)_50%)]" />
@@ -55,11 +82,11 @@ export function Hero() {
 
             {/* CTAs */}
             <div className="mt-10">
-              <a href="/download">
-                <Button size="lg" className="h-14 rounded-full bg-white px-8 text-lg font-semibold text-black hover:bg-gray-200">
+              <Button asChild size="lg" className="h-14 rounded-full bg-white px-8 text-lg font-semibold text-black hover:bg-gray-200">
+                <a href="/download">
                   <Download className="mr-2 h-5 w-5" /> Download for Mac
-                </Button>
-              </a>
+                </a>
+              </Button>
             </div>
 
             {/* System Requirements */}
@@ -78,13 +105,17 @@ export function Hero() {
           >
             <div className="rounded-xl border border-white/10 bg-[#0a0a0a] p-1 shadow-2xl" style={{ transform: 'scale(1.20)', transformOrigin: 'top center' }}>
               <video
-                autoPlay
-                loop
+                ref={videoRef}
+                autoPlay={!prefersReducedMotion}
+                loop={!prefersReducedMotion}
                 muted
                 playsInline
+                controls={prefersReducedMotion}
+                preload="metadata"
+                poster="/video/poster.jpg"
                 className="w-full rounded-[12px]"
               >
-                <source src="/video/screencharm-1768386799845.mp4" type="video/mp4" />
+                <source src="/video/screencharm.mp4" type="video/mp4" />
               </video>
             </div>
           </motion.div>
